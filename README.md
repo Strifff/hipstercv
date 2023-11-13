@@ -1,4 +1,6 @@
-# hipstercv
-Hipster CV
+# Resumé
 
-xfun::embed_file("./resume.pdf")
+The PDF resumé can be found [here](./resume.pdf).
+
+![Preview](./resume.png)
+
