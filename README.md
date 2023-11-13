@@ -1,2 +1,0 @@
-# hipstercv
-Hipster CV
