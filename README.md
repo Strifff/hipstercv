@@ -1,5 +1,4 @@
 # hipstercv
 Hipster CV
 
-
-![Resumé](./resume.pdf)
+xfun::embed_file("./resume.pdf")
