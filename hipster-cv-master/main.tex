@@ -1,9 +1,11 @@
-\documentclass[grey]{hipstercv}
+\documentclass[lighthipster]{hipstercv}
 % available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
 \usepackage[margin=1cm, a4paper]{geometry}
-
+\usepackage[swedish]{babel} % Enable Swedish language support
+\usepackage[export]{adjustbox}
+%\usepackage{fontawesome}
 
 %------------------------------------------------------------------ Variablen
 
@@ -28,7 +30,7 @@
 
 
 
-\header{\bg{headerfontbox}{headerfontboxfont}{Captain} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge Jack Sparrow}}{\bg{headerfontbox}{headerfontboxfont}{\large Pirate}}{jack.jpg}{headerblue}{3.5cm}{2cm}
+\header{\bg{headerfontbox}{headerfontboxfont}{Computer Science and Engineering student} }{\bgupper{headerfontbox}{headerfontboxfont}{\bfseries\Huge Axel Solhall}}{\bg{headerfontbox}{headerfontboxfont}{\large Chalmers University of Technology}}{face.png}{banner3.png}{3.5cm}{1.5cm}
 
 
 
@@ -52,32 +54,35 @@
 \footnotesize
 {\setasidefontcolour
 \bgupper{cvgreen}{white}{Facts} \\
-\bg{cvgreen}{white}{personal} \\
+\bg{cvgreen}{white}{Personal} \\
 
 \begin{tabular}{ll}
-\faMale&Jack Sparrow \\
-\faGlobe& nationality: English  \\
-\faBirthdayCake&1690 \\
-\faMapMarker&on a ship \\
+\hspace{0.28em}\faMale&Axel Solhall \\
+\faGlobe& Sweden \\
+\hspace{0.05em}\faBirthdayCake&$14^{th}$ March 1995\\
+\hspace{0.13em}\faMapMarker&Lilla regementsvägen 16\\
+\foMapMarker&Göteborg
 \end{tabular}
 
 \bigskip
 
+\bgupper{cvgreen}{white}{About me} \\
 \bg{cvgreen}{white}{Areas of specialization} \\
 
-Privateering ~•~ Bucaneering ~•~ Parler
+Data Science ~•~ AI % ~•~ Parler
 
 \bigskip
 
-\bgupper{cvgreen}{white}{Skills} \\
+%\bgupper{cvgreen}{white}{Skills} \\
 \bg{cvgreen}{white}{Languages}
 \bigskip
 
 
 \begin{minipage}[t]{\leftcolwidth}
 \begin{tabular}{l | ll}
-\textbf{English} & C2 & {\phantom{x}\footnotesize mother tongue} \\
-\textbf{French} & C2 & \pictofraction{\faCircle}{cvpurple}{3}{black!30}{1}{\tiny}
+\textbf{Swedish} &  {\phantom{}\footnotesize mother tongue} \\
+\textbf{English} &   C1 
+%\textbf{French} & C2 & \pictofraction{\faCircle}{cvpurple}{3}{black!30}{1}{\tiny}
 \end{tabular}
 \end{minipage}
 
@@ -85,21 +90,25 @@ Privateering ~•~ Bucaneering ~•~ Parler
 
 \bg{cvgreen}{white}{Interests}\\
 
-\bubblediagram{{\textbf{a pirate's} \\\textbf{life}},  the sea, pillaging, plundering, ships, stealing, hijacking, \textbf{The Black}\\ \textbf{Pearl}}
+\bubblediagram{
+{\ \ \ \ \textbf{Axel's}\  \ \ \ \\\ \textbf{life}\ },
+Artificial\\Intelligence, Coding, Bouldering, Festivals, Working\\out, TV shows, Vacations, Friends}
 
-\hspace{3cm} \color{labelcolour}{OS:} \hspace{0.5em}\icon{\faWindows}{labelcolour}{\Large} \hspace{0.5em} \icon{\faLinux}{labelcolour}{\Large} 
+\hspace{3cm} \color{labelcolour}{OS:} \hspace{0.5em}\icon{\faWindows}{labelcolour}{\Large} \hspace{0.5em} \icon{\faApple}{labelcolour}{\Large} 
 \bigskip
 
 \bg{cvgreen}{white}{IT \& programming} \\
 
 \begin{minipage}[t]{0.3\textwidth}
 \begin{tabular}{r @{\hspace{0.5em}}l}
-     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.4}{0.5em}{cvpurple}\\
-     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{xslt} & \barrule{0.5}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.5}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{R} & \barrule{0.25}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{python} &  \barrule{0.4}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.35}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Rust} & \barrule{0.3}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Java} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{javscript} & \barrule{0.2}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{SQL} & \barrule{0.15}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{C} & \barrule{0.15}{0.5em}{cvpurple} \\
+     
 \end{tabular}
 
 
@@ -110,8 +119,9 @@ Privateering ~•~ Bucaneering ~•~ Parler
 \bigskip
 
 \scalebox{0.8}{
-\iconcross{\Huge}{white}{cvred}{\color{black!30}\faBook}{\href{mailto:the.latex.ninja@gmail.com}{\faEnvelopeO}}{\faPhone}{\faCode}
-}
+\iconcross{\Huge}{black!30}{cvred}{\href{https://www.linkedin.com/in/axelsolhall}{\faLinkedin}}
+{\href{https://github.com/Strifff}{\faGithub}}{\href{tel:+46762007406}{\faPhone}}
+{\href{mailto:me@axelsolhall.se}{\faEnvelope}}
 
 \phantom{turn the page}
 
@@ -121,71 +131,83 @@ Privateering ~•~ Bucaneering ~•~ Parler
 \switchcolumn
 
 \small
-\section*{Short Resumé}
+\section*{Working experience}
 
 \begin{tabular}{r| p{0.4\textwidth} c}
-    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvred}}{Finally got the goddamn ship back.}{disney.png} \\
-    \cvevent{2019}{Freelance Pirate}{Bucaneering}{Tortuga \color{cvred}}{This and that. The usual, aye?}{medal.jpeg} \\
-    \cvevent{2016--2017}{Captain of the Black Pearl}{Lead}{Tortuga \color{cvred}}{Found a secret treasure, lost the ship.}{medal.jpeg}
+    \cvevent{2023--2024}{Teaching Assistant}{Chalmers}{Göteborg \color{cvred}}{
+    $\cdot$ Data Structures and Algorithms\\
+    $\cdot$ Computer Science Engineering Project}{chalmers.png} \\
+    \cvevent{2022--2023}{Teaching Assistant}{Chalmers}{Göteborg \color{cvred}}{
+    $\cdot$ Computer Communication\\
+    $\cdot$ Java: Object Oriented Programming\\
+    $\cdot$ Haskell: Functional Programming}{chalmers.png} \\
+    \cvevent{2021--2023}{Warehouse administration}{Cepheid}{Solna \color{cvred}}{Booking and staging of internal orders\\
+    Full time until September 2021, school breaks since}{cepheid.png} \\
+    \cvevent{2020--2021}{Teamleader of goods reception and shipping}{Getinge}{Solna \color{cvred}}{Managed a department}{getinge.png}
 \end{tabular}
 
-\vspace{4em}
+\vspace{1em}
 
 \begin{minipage}[t]{0.4\textwidth}
-\section*{Degrees}
+\section*{Education}
 \begin{tabular}{r p{0.6\textwidth} c}
-    \cvdegree{1710}{Captain}{Certified}{Tortuga Uni \color{headerblue}}{}{disney.png} \\
-    \cvdegree{1715}{Bucaneering}{M.A.}{London \color{headerblue}}{}{medal.jpeg} \\
-    \cvdegree{1720}{Bucaneering}{B.A.}{London \color{headerblue}}{}{medal.jpeg}
+    \cvdegree{2024-2026}{Master's: Data Science and AI}{Planned}{Chalmers \color{headerblue}}{}{chalmers.png} \\
+    \cvcomp{2024}{Bachelor's thesis}{Confirmed}{Hitachi \color{headerblue}}{Requirements Engineering through \ \ \ \ \ \newline Prompt Engineering}{hitachi.png} \\
+    \cvdegree{2021-2024}{Bachelor's: Computer Science and Engineering}{Ongoing}{Chalmers \color{headerblue}}{GPA: 4.8/5.0}{chalmers.png} \\
+    \cvdegree{2014-2019}{Master's: Electrical Power Engingeering}{Discontinued}{KTH \color{headerblue}}{}{kth.png} \\
 \end{tabular}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.16\textwidth}
 \section*{Hobbies}
 % usage \hobbyicon{<fontawesome icon}{Text}{background color of circle}{size of icon}{space text below icon}
-\hobbyicon{\color{iconcolour}\faFlask}{Rhum}{cvgreen}{\iconsize}{2em} \hfill
-\hobbyicon{\color{iconcolour}\faBook}{The Code}{cvorange}{\iconsize}{2em}
 
-\hobbyicon{\color{iconcolour}\faComment}{Parler}{cvpurple}{\iconsize}{2em} \hspace{1em}
+\hobbyicon{\color{iconcolour}\faDumbbell}{Gym}{cvgreen}{\iconsize}{2em} \hfill
+\hobbyicon{\color{iconcolour}\faCode}{Coding}{cvorange}{\iconsize}{2em}
+\hobbyicon{\color{iconcolour}\faUsers}{Family}{cvpurple}
+{\iconsize}{2em} 
+\hspace{1.3em}
 \hobbyicon{\color{iconcolour}\faBeer}{Beer}{headerblue}{\iconsize}{2em}
 \end{minipage}
 
-\vspace{4em}
+\vspace{2em}
 
 \begin{minipage}[t]{0.3\textwidth}
-\section*{Certificates \& Grants}
-\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
-    1708 & Captain's Certificates \\
-    1710 & Travel grant \\
-    1715--1716 & Grant from the Pirate's Company
-\end{tabular}
-\section*{Strenghts}
-\cvtag{honest}
-\cvtag{thieving}
-\cvtag{handsome}
+%\section*{Certificates \& Grants}
+%\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+%    1708 & Captain's Certificates \\
+ %   1710 & Travel grant \\
+ %   1715--1716 & Grant from the Pirate's Company
+%\end{tabular}
 \section*{References}
-\cvkeyword{Will Turner}{cvgreen}{iconcolour}
-\cvkeyword{Barbossa}{cvgreen}{iconcolour} \\
+\cvref{Luka Mijaljevic}{Staging Supervisor}{Cepheid}{luka.mijaljevic@cepheid.com}{+46767111664}{+46 76-711 16 64}
+\cvref{Farid Ahmed}{Manager Internal Logistics}{Getinge}{farid.ahmed@getinge.com}{+46707827646}{+46 70-782 76 46}
 
-\cvkeyword{possibly Mr. Swan}{headerblue}{iconcolour}
+
 \end{minipage}\hfill
 \begin{minipage}[t]{0.3\textwidth}
-\section*{Publications}
-\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
-    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
-    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
-\end{tabular}
-\section*{Talks}
-\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
-    Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
-\end{tabular}
+%\section*{Publications}
+%\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+%    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing %Press. \\
+%    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} %(1/1720).
+%\end{tabular}
+%\section*{Talks}
+%\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+%    Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: %\emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+%\end{tabular}
+
+\section*{Strenghts}
+\cvtag{dedicated}
+\cvtag{pragmatic}
+\cvtag{analytical}
+\cvtag{altruistic}
+\cvtag{approachable}
+
+\section*{Miscellaneous}
+\cvtag{B car drivers license}
+\cvtag{A1-A4, B1-B6, lift license}
+
+
 \end{minipage}
-
-
-
-
-
-
-
 
 
 \vfill{} % Whitespace before final footer
@@ -195,8 +217,10 @@ Privateering ~•~ Bucaneering ~•~ Parler
 %----------------------------------------------------------------------------------------
 \setlength{\parindent}{0pt}
 \begin{minipage}[t]{\rightcolwidth}
-\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-{\small Jack Sparrow \icon{\faEnvelopeO}{cvpurple}{} The Black Pearl \icon{\faMapMarker}{cvpurple}{} Tortuga \icon{\faPhone}{cvpurple}{} 0099/333 5647380 \newline\icon{\faAt}{cvpurple}{} \protect\url{jack@sparrow.com}
+\begin{center}\fontfamily{\sfdefault}\selectfont 
+{\small \hspace{5em}Axel Solhall\newline
+\hspace{30em}{\icon{\faEnvelope}{cvpurple}{} \href{mailto:me@axelsolhall.se}{me@axelsolhall.se}} \ \icon{\faPhone}{cvpurple}{} {\href{tel:+46762007406}{+46 76 -200 74 06}}\newline
+\icon{\faGithub}{cvpurple}{} \protect{\href{https://github.com/Strifff}{github.com/Strifff}} \ \icon{\faLinkedin}{cvpurple}{} \href{https://www.linkedin.com/in/axelsolhall}{linkedin.com/in/axelsolhall}\hspace{5.5em}
 }
 \end{center}
 \end{minipage}
@@ -205,3 +229,4 @@ Privateering ~•~ Bucaneering ~•~ Parler
 \end{paracol}
 
 \end{document}
+

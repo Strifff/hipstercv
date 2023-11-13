@@ -1,7 +1,7 @@
 
 \usepackage[T1]{fontenc}
 
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{hyperref}
 \setlength{\parindent}{0cm}
 \usepackage{paracol}
@@ -11,6 +11,7 @@
 \usepackage{tikz-3dplot}
 \usepackage{smartdiagram}
 \usepackage{float}
+\usepackage[export]{adjustbox}
 
 \usepackage{array}
 %\setlength\extrarowheight{1.5em} % adds some spacing between the lines of the CV's tabulars
@@ -143,7 +144,7 @@
 
 \newcommand{\hobbyicon}[5]{%
 \begin{tikzpicture}%
-\draw[draw=none,fill=#3] (0,0) circle (0.5);%
+\draw[draw=none,fill=#3] (0,0) circle (0.55);%
 \node[](icon) at (0,0) {#4#1};%
 \node[below=#5,align=center] at (icon) {#2};%
 \end{tikzpicture}
@@ -175,12 +176,23 @@
 {\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
 }
 
-\newcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 ~\faMapMarker}\newline{\color{black!70}\footnotesize #5}\vspace{1.5em} & \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}}
+\newcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 ~\faMapMarker}\newline{\color{black!70}\footnotesize\parbox{\linewidth}{#5}}\vspace{1.2em} & \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}}
 
-\newcommand{\cvdegree}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize ~\faUniversity}}\newline{\color{black!70}\scriptsize #5}\vspace{0.5em} & \raisebox{-0.7\height}{\includegraphics[height=0.5cm]{#6}}}
+%black!70
+\newcommand{\cvdegree}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize ~\faUniversity}}\newline{\color{black!70}\scriptsize #5}\vspace{0.6em} & \raisebox{-0.7\height}{\includegraphics[height=0.75cm]{#6}}}
+
+\newcommand{\cvcomp}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize \ \   \faBuilding}}\newline{\color{black!70}\scriptsize #5}\vspace{0.6em} & \raisebox{-0.7\height}{\includegraphics[height=0.75cm]{#6}}}
+
+\newcommand{\cvref}[6]{\faUser \ \textbf{#1}\newline
+\textsc{#2} $\cdot$ {#3}\newline
+{\faAt \ {\href{mailto:#4}{#4}}}\newline
+{\faPhone \ {\href{tel:#5}{#6}}}\newline
+\vspace{0.0em}
+\par
+}
 
 
-
+%\cvevent{2018--2019}{Teamleader of goods reception and shipping}{Getinge}{Solna \color{cvred}}{Managed a department}{getinge.png}
 
 
 
@@ -190,13 +202,15 @@
 % inspired by: https://www.sharelatex.com/templates/cv-or-resume/fancy-cv
 \newcommand{\header}[7]{
 \tikz[remember picture,overlay] {%
-\node[rectangle, fill=#5, anchor=north, minimum width=\paperwidth, minimum height=5cm](header) at (current page.north){};%
+\node[rectangle, anchor=north, minimum width=\paperwidth, minimum height=5cm, yshift=0.12cm](header) at (current page.north){\includegraphics[width=\paperwidth, height=5cm , valign=t]{#5}};%
+%\node[rectangle, fill=#5, anchor=north, minimum width=\paperwidth, minimum height=5cm](header) at (current page.north){};%
 \node[left=#7 of header.north, anchor=east](name) at (header.east) {\fontfamily{\sfdefault}\selectfont #2};%
 \node[anchor=south east](degree) at (name.north east) {\fontfamily{\sfdefault}\selectfont #1};%
 \node[anchor=north east](descr) at (name.south east) {\fontfamily{\sfdefault}\selectfont #3};%
 \node[right=#6 of header.west, anchor=west](picture) at (header.west) {};%
-\draw[path picture={\node[anchor=center] at (path picture bounding box.center){\includegraphics[height=4.3cm]{#4}} ;}] (picture) circle (2) ;}%
-\vspace{1.5cm}%
+\draw[path picture={\node[anchor=center] at (path picture bounding box.center){\includegraphics[height=4.3cm]{#4}} ;}] (picture) circle (2.1) ;}%
+
+\vspace*{1.2cm}%
 }
 
 
